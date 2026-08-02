@@ -24,6 +24,7 @@ outputs/modelo_estruturado_meta.json
 # Dados de imagem (baixados a parte - ver README)
 jpeg/
 /csv/
+docs/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -33,7 +34,6 @@ jpeg/
 *.pdf
 *.docx
 *.bat
-*.md
 
 # SO / IDE
 .DS_Store
