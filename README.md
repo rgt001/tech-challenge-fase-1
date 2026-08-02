@@ -23,7 +23,7 @@ Projeto Tech Challenge 1/
 ## Requisitos
 
 - Python 3.10+
-- opcionalmente GPU NVIDIA para a parte de CNN
+- Para a analise de imagens(projeto extra) é necessário uma GPU NVIDIA.
 
 ## Instalação
 
@@ -93,9 +93,3 @@ python -m techchallenge.cli.treinar_radiomica
 
 - Breast Cancer Wisconsin
 - CBIS-DDSM
-
-## Observações
-
-- arquivos pesados de imagem, pesos de modelo e artefatos grandes não são versionados
-- a pasta `docs/` fica fora do repositório
-- o projeto pode ser executado tanto pelos módulos Python quanto pelos scripts em `src/techchallenge/cli/`
