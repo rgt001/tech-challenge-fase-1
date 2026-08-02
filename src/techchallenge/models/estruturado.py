@@ -5,6 +5,7 @@ StackingClassifier que combina todos com um meta-modelo (Regressao Logistica).
 """
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -18,6 +19,14 @@ from .. import config
 def _pipe(clf):
     """Envolve o classificador num Pipeline com padronizacao (sem leakage)."""
     return Pipeline([("scaler", StandardScaler()), ("clf", clf)])
+
+
+def _svm_calibrado(class_weight=None):
+    """Cria um SVM calibrado para disponibilizar probabilidades sem usar API descontinuada."""
+    return CalibratedClassifierCV(
+        SVC(kernel="rbf", class_weight=class_weight),
+        ensemble=False,
+    )
 
 
 def construir_modelos(balanced=False):
@@ -39,7 +48,7 @@ def construir_modelos(balanced=False):
         "KNN": _pipe(KNeighborsClassifier(n_neighbors=5)),
         "Random Forest": _pipe(RandomForestClassifier(n_estimators=300, random_state=rs, class_weight=cw)),
         "Gradient Boosting": _pipe(GradientBoostingClassifier(random_state=rs)),
-        "SVM": _pipe(SVC(kernel="rbf", probability=True, random_state=rs, class_weight=cw)),
+        "SVM": _pipe(_svm_calibrado(class_weight=cw)),
     }
 
 
