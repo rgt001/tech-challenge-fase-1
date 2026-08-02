@@ -29,6 +29,9 @@ jpeg/
 
 # Arquivos temporarios / pacotes
 *.zip
+*.pdf
+*.docx
+*.bat
 
 # SO / IDE
 .DS_Store
