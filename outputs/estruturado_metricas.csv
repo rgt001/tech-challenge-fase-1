@@ -1,0 +1,8 @@
+Modelo,Accuracy,Recall (maligno),F1 (maligno),CV Acc (media),CV Recall (media)
+Regressao Logistica,0.9649,0.9286,0.9512,0.9714,0.9471
+Arvore de Decisao,0.9211,0.8333,0.8861,0.9341,0.8882
+KNN,0.9561,0.9048,0.9383,0.9626,0.9176
+Random Forest,0.9737,0.9286,0.963,0.9582,0.9353
+Gradient Boosting,0.9649,0.9048,0.95,0.9538,0.9353
+SVM,0.9737,0.9286,0.963,0.9736,0.9529
+Stacking,0.9825,0.9524,0.9756,0.9736,0.9529

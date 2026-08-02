@@ -1,0 +1,8 @@
+Modelo,Accuracy,Recall (maligno),F1 (maligno),AUC
+Regressao Logistica,0.5497,0.7029,0.5504,0.6252
+Arvore de Decisao,0.517,0.7681,0.555,0.6069
+KNN,0.5952,0.5109,0.4974,0.6057
+Random Forest,0.5966,0.5543,0.5186,0.6222
+Gradient Boosting,0.6207,0.4601,0.4875,0.6443
+SVM,0.5753,0.7101,0.5673,0.6249
+Stacking,0.6122,0.4275,0.4637,0.6384

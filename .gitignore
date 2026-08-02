@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+
+# Ambientes virtuais
+.venv/
+.venv-cnn/
+.venv-gpu/
+venv/
+env/
+
+# Modelos e artefatos gerados (grandes; regeraveis)
+outputs/*.pt
+outputs/*.keras
+outputs/*.joblib
+outputs/modelo_estruturado_meta.json
+
+# Dados de imagem (baixados a parte - ver README)
+jpeg/
+/csv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Arquivos temporarios / pacotes
+*.zip
+
+# SO / IDE
+.DS_Store
+.idea/
+.vscode/

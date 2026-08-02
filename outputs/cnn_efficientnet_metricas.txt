@@ -1,0 +1,13 @@
+Modelo: efficientnet
+Accuracy: 0.6676
+Recall (maligno): 0.7029
+F1 (maligno): 0.6238
+
+              precision    recall  f1-score   support
+
+     Benigno       0.77      0.64      0.70       428
+     Maligno       0.56      0.70      0.62       276
+
+    accuracy                           0.67       704
+   macro avg       0.67      0.67      0.66       704
+weighted avg       0.69      0.67      0.67       704

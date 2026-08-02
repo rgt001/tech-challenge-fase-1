@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "techchallenge"
+version = "1.0.0"
+description = "Sistema de apoio ao diagnostico em saude da mulher (Tech Challenge Fase 1 - IADT/FIAP)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "scikit-learn>=1.3",
+    "shap>=0.44",
+]
+
+# Dependencias da fase extra (CNN). Instale com:  pip install -e ".[cnn]"
+# (para GPU, instale antes o torch pelo indice CUDA - ver README)
+[project.optional-dependencies]
+cnn = ["torch>=2.0", "torchvision>=0.15", "pillow>=10.0"]
+
+# Comandos de linha de comando criados ao instalar o pacote (pip install -e .)
+[project.scripts]
+tc = "techchallenge.__main__:main"
+tc-treinar-estruturado = "techchallenge.cli.treinar_estruturado:main"
+tc-prever-estruturado = "techchallenge.cli.prever_estruturado:main"
+tc-preparar-manifesto = "techchallenge.cli.preparar_manifesto:main"
+tc-treinar-cnn = "techchallenge.cli.treinar_cnn:main"
+tc-prever = "techchallenge.cli.prever_cnn:main"
+tc-extrair-radiomica = "techchallenge.cli.extrair_radiomica:main"
+tc-treinar-radiomica = "techchallenge.cli.treinar_radiomica:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,13 @@
+Modelo: densenet
+Accuracy: 0.6435
+Recall (maligno): 0.7355
+F1 (maligno): 0.6180
+
+              precision    recall  f1-score   support
+
+     Benigno       0.77      0.58      0.67       428
+     Maligno       0.53      0.74      0.62       276
+
+    accuracy                           0.64       704
+   macro avg       0.65      0.66      0.64       704
+weighted avg       0.68      0.64      0.65       704
