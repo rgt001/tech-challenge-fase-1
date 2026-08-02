@@ -33,6 +33,7 @@ jpeg/
 *.pdf
 *.docx
 *.bat
+*.md
 
 # SO / IDE
 .DS_Store
