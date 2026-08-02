@@ -18,6 +18,7 @@ env/
 outputs/*.pt
 outputs/*.keras
 outputs/*.joblib
+outputs/*.png
 outputs/modelo_estruturado_meta.json
 
 # Dados de imagem (baixados a parte - ver README)
